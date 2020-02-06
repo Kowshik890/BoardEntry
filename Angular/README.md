@@ -4,7 +4,7 @@
 The functionalities of this project are:
 1. Show All Employee Information
 1. Insert Employee Information
-		  * ID is generated automatically
+		    * ID is generated automatically
 1. Update Employee Information by Employee ID
-		  * While updating Employee Information, ID can't be updated
+		    * While updating Employee Information, ID can't be updated
 1. Delete Employee Information by Employee ID
