@@ -1,0 +1,70 @@
+<html>
+<body>
+<div class="container">
+  <div class="container-fluid">
+    <div class="row"><!--1st row begin-->
+      <div class="col-md-12 col-xs-12">
+        <div class="col-md-3 col-xs-3" style="float: left"></div>
+        <div class="col-md-6 col-xs-6" style="float: left">
+
+          <form  #f="ngForm"  class="board-entry-form" (submit)="boardEntry($event)"  >
+            <h2 style="text-align: center; margin-top: 10%;">Board Entry Form</h2><br>
+
+            <label style="text-align: left; padding-left: 9%;" >BoardId</label>
+
+            <input  style="width: 25%;margin-left: 12%"  id="id" type="text"  value="{{board.id}}"
+
+            > <br><br>
+            <label style="text-align: left;padding-left:9.5%;" for="bname">BoardName</label>
+            <input type="text" style="width: 55%;margin-left: 5.5%" id="bname" required pattern="[a-zA-Z ]*"  name="bname" #bname="ngModel"
+                   [(ngModel)]="model.bname " >
+            <span class="help-block" *ngIf="bname.errors?.required && bname.touched" style="padding-left: 35%; color: red"> Board name is required</span>
+
+            <span class="help-block" *ngIf="bname.errors?.pattern && bname.touched" style="padding-left: 35%; color: red"> Enter only characters</span>
+            <!--<div style="color:red; margin-left: 40%">-->
+              <!--{{errorFind1}}-->
+            <!--</div>-->
+            <!--<div>-->
+              <!--<table>-->
+              <!--<tr *ngFor="let i of data2">-->
+
+                <!--<td>{{i.id}}</td>-->
+              <!--</table>-->
+            <!--</div>-->
+
+            <div class="row" style="margin-top: 5%;">
+              <div class="col-md-12 col-xs-12">
+                <div class="col-md-3 col-md-xs-6" style="float: left;"></div>
+                <div class="col-md-3 col-md-xs-6" style="float: left;">
+                  <button class="btn btn-primary" style="width: 100%;" type="submit">Submit</button>
+                </div>
+
+                <div class="col-md-3 col-md-xs-6" style="float: left;">
+                     <button class="btn btn-success" style="width: 100%" (click)="getContacts()"    routerLink="/board-report" routerLinkActive="active" >Report</button>
+                </div>
+                <div class="col-md-3 col-md-xs-6" style="float: right;"></div>
+              </div>
+            </div>
+
+          </form>
+        </div>
+        <div class="col-md-3 col-xs-3" style="float: right"></div>
+      </div>
+    </div><!--1st row end-->
+  </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
